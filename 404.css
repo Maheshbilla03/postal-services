@@ -1,0 +1,281 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(
+        135deg,
+        #07182f,
+        #123b63,
+        #2563eb
+    );
+}
+
+.error-container{
+    position:relative;
+    width:100%;
+    text-align:center;
+    padding:20px;
+}
+
+.error-content{
+    position:relative;
+    z-index:2;
+    color:#fff;
+    animation:fadeUp 1.2s ease;
+}
+.error-content h1{
+    font-size:180px;
+    font-weight:900;
+    line-height:1;
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        45deg,
+        #ff6b00,
+        #ffb703,
+        #ffd60a
+    );
+
+    background-size:300% 300%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:gradientMove 5s ease infinite;
+    text-shadow:0 0 30px rgba(255,183,3,.3);
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.error-content h2{
+    font-size:40px;
+    margin:20px 0;
+}
+
+.error-content p{
+    max-width:650px;
+    margin:0 auto 35px;
+    line-height:1.8;
+    color:#dbeafe;
+    padding:0 15px;
+}
+
+.truck{
+    font-size:80px;
+    margin-bottom:20px;
+    animation:truckMove 4s ease-in-out infinite;
+}
+
+.error-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.home-btn,
+.track-btn{
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.4s;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.home-btn{
+    background:#ffb703;
+    color:#000;
+}
+
+.track-btn{
+    background:#fff;
+    color:#111;
+}
+
+.home-btn:hover,
+.track-btn:hover{
+    transform:translateY(-5px);
+}
+
+/* Floating Background */
+
+.floating-circle{
+    position:absolute;
+    border-radius:50%;
+    opacity:.15;
+}
+
+.circle1{
+    width:300px;
+    height:300px;
+    background:#ffb703;
+    top:10%;
+    left:10%;
+    animation:float 8s infinite;
+}
+
+.circle2{
+    width:200px;
+    height:200px;
+    background:#ff6b00;
+    bottom:10%;
+    right:15%;
+    animation:float 10s infinite;
+}
+
+.circle3{
+    width:150px;
+    height:150px;
+    background:#fff;
+    top:20%;
+    right:25%;
+    animation:float 6s infinite;
+}
+
+@keyframes truckMove{
+    0%{
+        transform:translateX(-40px);
+    }
+    50%{
+        transform:translateX(40px);
+    }
+    100%{
+        transform:translateX(-40px);
+    }
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-30px);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Tablet */
+
+@media(max-width:768px){
+
+    body{
+        overflow:auto;
+    }
+
+    .error-content h1{
+        font-size:120px;
+    }
+
+    .error-content h2{
+        font-size:28px;
+    }
+
+    .error-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .truck{
+        font-size:60px;
+    }
+
+    .error-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .home-btn,
+    .track-btn{
+        width:220px;
+        text-align:center;
+    }
+
+    .circle1{
+        width:180px;
+        height:180px;
+    }
+
+    .circle2{
+        width:130px;
+        height:130px;
+    }
+
+    .circle3{
+        width:100px;
+        height:100px;
+    }
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+    .error-content h1{
+        font-size:85px;
+    }
+
+    .error-content h2{
+        font-size:22px;
+    }
+
+    .error-content p{
+        font-size:14px;
+        padding:0 10px;
+    }
+
+    .truck{
+        font-size:50px;
+    }
+
+    .home-btn,
+    .track-btn{
+        width:100%;
+        max-width:250px;
+        padding:14px 20px;
+    }
+
+    .circle1{
+        width:120px;
+        height:120px;
+    }
+
+    .circle2{
+        width:90px;
+        height:90px;
+    }
+
+    .circle3{
+        width:70px;
+        height:70px;
+    }
+}
