@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Postal Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+<div class="logo">
+    <a href="index.html">🚚 STACKLY</a>
+</div>
+
+
+        <ul>
+            <li class="menu active" data-page="home">
+                <i class="fa-solid fa-chart-line"></i> Dashboard
+            </li>
+
+            <li class="menu" data-page="orders">
+                <i class="fa-solid fa-box"></i> Orders
+            </li>
+
+            <li class="menu" data-page="tracking">
+                <i class="fa-solid fa-location-dot"></i> Tracking
+            </li>
+
+            <li class="menu" data-page="customers">
+                <i class="fa-solid fa-users"></i> Customers
+            </li>
+
+            <li class="menu" data-page="reports">
+                <i class="fa-solid fa-chart-column"></i> Reports
+            </li>
+
+            <li class="menu" data-page="settings">
+                <i class="fa-solid fa-gear"></i> Settings
+            </li>
+
+            <li id="logout">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </li>
+        </ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <button id="menuToggle" class="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+        <!-- DASHBOARD PAGE -->
+        <section id="home" class="page">
+
+            <div class="dashboard-section">
+                <h2>📊 Dashboard Overview</h2>
+
+                <div class="cards">
+                    <div class="card">
+                        <h3>12,450</h3>
+                        <p>Total Shipments</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>850</h3>
+                        <p>Pending Orders</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>11,100</h3>
+                        <p>Delivered Orders</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>245</h3>
+                        <p>Active Drivers</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ORDERS PAGE -->
+        <section id="orders" class="page">
+
+            <div class="dashboard-section">
+
+                <h2>📦 Recent Orders</h2>
+
+                <table class="order-table">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                    </tr>
+
+                    <tr>
+                        <td>#PS1001</td>
+                        <td>Rahul Kumar</td>
+                        <td>🚚 In Transit</td>
+                        <td>₹450</td>
+                    </tr>
+
+                    <tr>
+                        <td>#PS1002</td>
+                        <td>Priya Sharma</td>
+                        <td>✅ Delivered</td>
+                        <td>₹620</td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- TRACKING PAGE -->
+        <section id="tracking" class="page">
+
+            <div class="dashboard-section">
+
+                <h2>🚚 Live Tracking</h2>
+
+                <div class="tracking-box">
+
+                    <div class="track-item">
+                        <h4>Shipment #TRK45896</h4>
+                        <p>Hyderabad → Chennai</p>
+                        <span>In Transit</span>
+                    </div>
+
+                    <div class="track-item">
+                        <h4>Shipment #TRK45897</h4>
+                        <p>Delhi → Mumbai</p>
+                        <span>Delivered</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CUSTOMERS PAGE -->
+        <section id="customers" class="page">
+
+            <div class="dashboard-section">
+
+                <h2>👥 Customers</h2>
+
+                <div class="customer-grid">
+
+                    <div class="customer-card">
+                        <i class="fa-solid fa-user"></i>
+                        <h4>Mahesh Billa</h4>
+                        <p>52 Orders</p>
+                    </div>
+
+                    <div class="customer-card">
+                        <i class="fa-solid fa-user"></i>
+                        <h4>Suresh Kumar</h4>
+                        <p>41 Orders</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- REPORTS PAGE -->
+        <section id="reports" class="page">
+
+            <div class="dashboard-section">
+
+                <h2>📊 Reports</h2>
+
+                <p>Revenue Reports</p>
+                <p>Monthly Analytics</p>
+                <p>Shipment Statistics</p>
+
+            </div>
+
+        </section>
+
+        <!-- SETTINGS PAGE -->
+        <section id="settings" class="page">
+
+            <div class="dashboard-section">
+
+                <h2>⚙ Settings</h2>
+
+                <div class="support-grid">
+
+                    <div class="support-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <h4>Support</h4>
+                        <p>+91 98765 43210</p>
+                    </div>
+
+                    <div class="support-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>support@postalpro.com</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="dashboard.js"></script> 
